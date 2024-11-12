@@ -1,0 +1,36 @@
+:root {
+    --min-width: 12rem;
+    --header-height: 4rem;
+    --footer-height: var(--header-height);
+}
+
+html, body{
+    height: 100vh;
+}
+
+body {
+    min-width: var(--min-width);
+    max-width: calc(var(--min-width) * 3);
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: var(--header-height) auto var(--footer-height)
+}
+
+body>main {
+    min-width: var(--min-width);
+    max-width: 70%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body>header {
+    grid-row: 1;
+}
+
+body>main {
+    grid-row: 2;
+}
+
+body>footer {
+    grid-row: 3;
+}
